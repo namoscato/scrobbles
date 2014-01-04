@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <title>What I'm Listening To</title>
+    <link rel="stylesheet" type="text/css" href="_/css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div id="wrap">
+      <ul id="playlist"></ul>
+    </div>
+    <div id="copyright">What I'm Listening To &copy; <script>document.write(new Date().getFullYear());</script> <a href="http://amoscato.com">Nick Amoscato</a></div>
+    
+    <script id="album-template" type="text/template">
+      <div class="album-title">
+        <p class="artist"><%= artist %></p>
+        <h1><span><%= name %></span></h1>
+      </div>
+      <img src="<%= cover %>" alt="<%= name %>" class="art">
+      <ul class="tracks"></ul>
+    </script>
+
+    <script id="track-template" type="text/template">
+      <p><%= title %><span class="time"><%= time %></p>
+    </script>
+
+    <script src="_/js/lib/require.js" data-main="_/js/app"></script>
+  </body>
+</html>
+  
